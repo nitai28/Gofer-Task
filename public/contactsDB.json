@@ -42,5 +42,25 @@
     "photo": "./img/contacts/4.jpg",
     "accountName": "noa_ch",
     "password": "555"
+  }, {
+    "id": 5,
+    "firstName": "Noa",
+    "lastName": "Chen",
+    "birthDay": "2/9/1992",
+    "phoneNumber": "0504443221",
+    "emailAddress": "noa_c@gmail.com",
+    "photo": "./img/contacts/4.jpg",
+    "accountName": "noa_ch",
+    "password": "555"
+  }, {
+    "id": 6,
+    "firstName": "Noa",
+    "lastName": "Chen",
+    "birthDay": "2/9/1992",
+    "phoneNumber": "0504443221",
+    "emailAddress": "noa_c@gmail.com",
+    "photo": "./img/contacts/4.jpg",
+    "accountName": "noa_ch",
+    "password": "555"
   }
 ]

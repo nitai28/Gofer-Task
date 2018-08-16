@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d0ebf7-d8dc-478a-a195-0ae276ee3b37" name="Default" comment="" />
+    <list default="true" id="e4d0ebf7-d8dc-478a-a195-0ae276ee3b37" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/cache-loader/810622604044a6e6e826bd23696532b9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/cache-loader/810622604044a6e6e826bd23696532b9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contactsDB.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/contactsDB.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact-exhibition.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact-exhibition.vue" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,11 +19,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="contact-list.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1540">
+              <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="contact-exhibition.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/contact-exhibition.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+            <state relative-caret-position="663">
+              <caret line="151" column="21" lean-forward="true" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contactsDB.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/contactsDB.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -44,6 +67,9 @@
       <replace>contact</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -54,7 +80,6 @@
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/css/main.css" />
-        <option value="$PROJECT_DIR$/public/contactsDB.json" />
         <option value="$PROJECT_DIR$/src/components/contact-details.vue" />
         <option value="$PROJECT_DIR$/src/views/contact-app.vue" />
         <option value="$PROJECT_DIR$/src/components/nav/nav.vue" />
@@ -63,6 +88,7 @@
         <option value="$PROJECT_DIR$/src/services/contact.service.js" />
         <option value="$PROJECT_DIR$/src/components/contact-add.vue" />
         <option value="$PROJECT_DIR$/src/components/contact-list.vue" />
+        <option value="$PROJECT_DIR$/public/contactsDB.json" />
         <option value="$PROJECT_DIR$/src/components/contact-exhibition.vue" />
       </list>
     </option>
@@ -83,12 +109,13 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1237" />
     <option name="height" value="675" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -174,12 +201,12 @@
       <option name="presentableId" value="Default" />
       <updated>1534227834479</updated>
       <workItem from="1534227837054" duration="24033000" />
-      <workItem from="1534305205535" duration="19530000" />
+      <workItem from="1534305205535" duration="32726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43563000" />
+    <option name="totallyTimeSpent" value="56759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -189,7 +216,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -408,22 +435,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
+        <state relative-caret-position="1540">
           <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/contactsDB.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="523">
+          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/contact-exhibition.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+        <state relative-caret-position="663">
+          <caret line="151" column="21" lean-forward="true" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
         </state>
       </provider>
     </entry>

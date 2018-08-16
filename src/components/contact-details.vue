@@ -4,11 +4,12 @@
             <img class="profile-pic" :src="contact.photo" alt="">
             <h3>{{contact.accountName}}</h3>
         </div>
-        <div class="line"></div>
+        <!--<div class="line"></div>-->
         <div class="details">
             <h2></h2>
-            <span>{{contact.firstName}} {{contact.lastName}}</span>
+            <span class="full-name">{{contact.firstName}} {{contact.lastName}}</span>
             <span>{{contact.emailAddress}}</span>
+            <span>{{contact.birthDay}}</span>
             <span>{{contact.phoneNumber}}</span>
         </div>
 
@@ -45,24 +46,38 @@
 
         }
         .profile {
-            width: 100%;
+            width: 70%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            .profile-pic{
+            border-right: solid 1px #e6e9f2;
+            h3 {
+                color: #131b3c;
+                font-weight: bold;
+
+            }
+
+            .profile-pic {
                 width: 60px;
                 height: 60px;
                 object-fit: cover;
-                border-radius: 40px ;
+                border-radius: 40px;
             }
         }
 
         .details {
+            color: #a5a8b5;
             width: 100%;
+            text-align: left;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            margin: 0 20px 5px;
+            .full-name {
+                font-weight: bold;
+                color: #131b3c;
+            }
         }
 
     }

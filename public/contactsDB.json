@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "firstName": "Itai",
+    "lastName": "Levi",
+    "birthDay": "29/10/1986",
+    "phoneNumber": "0503333283",
+    "emailAddress": "itai230@gmail.com",
+    "photo": "./img/contacts/1.jpg",
+    "accountName": "itai_123",
+    "password": "123"
+  },
+  {
+    "id": 2,
+    "firstName": "Moshe",
+    "lastName": "Cohen",
+    "birthDay": "29/1/1988",
+    "phoneNumber": "0508555583",
+    "emailAddress": "moshe_x@gmail.com",
+    "photo": "./img/contacts/2.jpg",
+    "accountName": "moshe_x",
+    "password": "123"
+  },
+  {
+    "id": 3,
+    "firstName": "Yarden",
+    "lastName": "Segal",
+    "birthDay": "2/5/1986",
+    "phoneNumber": "0504443283",
+    "emailAddress": "yarden10@gmail.com",
+    "photo": "./img/contacts/3.jpg",
+    "accountName": "yardenS_123",
+    "password": "123"
+  },
+  {
+    "id": 4,
+    "firstName": "Noa",
+    "lastName": "Chen",
+    "birthDay": "2/9/1992",
+    "phoneNumber": "0504443221",
+    "emailAddress": "noa_c@gmail.com",
+    "photo": "./img/contacts/4.jpg",
+    "accountName": "noa_ch",
+    "password": "555"
+  }
+]

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../assets/fonts/OpenSans-Regular.ttf'),
+    url('../assets/fonts/OpenSans-Bold.ttf');
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: OpenSans;
+    margin: 0;
+}
+
+
+
+

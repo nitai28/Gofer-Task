@@ -21,7 +21,7 @@
 
     .Rectangle-2 {
         width: 70px;
-        height: 800px;
+        min-height: 100vh;
         background-color: #454c68;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
         display: flex;

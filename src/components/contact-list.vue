@@ -8,16 +8,21 @@
             <div class="seperator"></div>
             <ul>
 
-                <li v-for="contact in contacts" :key="contact.id" @click="updateCurrentContact(contact.id)">
+                <li v-for="contact in contacts" :style="{position:posdefine}" :key="contact.id"
+                    @mouseover="updateCurrentContact(contact.id)"
+                    @mouseleave="closeDetails">
                     <div class="contact-box">
                         <div class="half-box">
                             <img class="contact-img" :src="contact.photo" alt="">
                             <h2 class="contact-full-name">{{contact.firstName}} {{contact.lastName}}</h2>
+                            <img class="x" v-if="currentContact&& contact.id===currentContact.id"
+                                 @click.stop="closeDetails"
+                                 src="/img/contact-list/close-remove-md.svg" alt="">
 
                         </div>
-                        <img v-if="currentContact&& contact.id===currentContact.id" @click.stop="closeDetails" src="/img/contact-list/close-remove-md.svg" alt="">
                     </div>
                     <div class="seperator"></div>
+
                     <contact-details v-if="currentContact && contact.id===currentContact.id" :contact="currentContact"
                                      class="contact-details"></contact-details>
                 </li>
@@ -37,7 +42,8 @@
         data() {
             return {
                 selectedContact: false,
-                currentContact: null
+                currentContact: null,
+                posdefine: 'static'
             }
         },
         methods: {
@@ -45,10 +51,13 @@
                 this.$store.commit({type: 'setSelectedContact', id: id});
                 this.currentContact = this.$store.state.currentContact;
                 this.selectedContact = !this.selectedContact;
+                this.posdefine = 'relative';
             },
             closeDetails() {
                 this.currentContact = ''
-            }
+                this.posdefine = 'static';
+            },
+
         },
         created() {
             this.$store.dispatch({type: 'getContacts'})
@@ -73,7 +82,6 @@
     .contact-list {
         border-right: 1px solid #d0d4e4;
         width: 280px;
-        height: 800px;
         background-color: #ffffff;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.09);
         .contact-list-content {
@@ -99,14 +107,37 @@
 
             }
             li {
-                position: relative;
+                .x {
+                    position: absolute;
+                    top: 24px;
+                    right: 18px;
+                }
+
                 .contact-details {
-                    /*background-color: #0a0a0a;*/
-                    position: relative;
+                    position: absolute;
                     margin-top: 5px;
                     margin-left: 43px;
-                    /*clip-path: polygon(29% 0, 35% 8%, 100% 8%, 100% 70%, 74% 70%, 0% 70%, 0 8%, 23% 8%);*/
-                    /*border: 2px solid black;*/
+                    top: 61px;
+                    z-index: 1;
+                    width: 282px;
+                    height: 130px;
+                    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+                    background-color: #ffffff;
+                    font-size: 12px;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 20%;
+                        width: 0;
+                        height: 0;
+                        border: 0.563em solid transparent;
+                        border-bottom-color: #e6e9f2;
+                        border-top: 0;
+                        margin-left: -0.562em;
+                        margin-top: -0.562em;
+                    }
 
                 }
             }
@@ -117,7 +148,7 @@
                 justify-content: space-between;
                 width: 280px;
                 height: 66px;
-                .half-box{
+                .half-box {
                     display: flex;
                 }
                 .contact-img {
@@ -129,11 +160,6 @@
                 }
                 .contact-full-name {
                     height: 18px;
-                    font-weight: normal;
-                    font-style: normal;
-                    font-stretch: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
                     color: #131b3c;
                     margin-left: 12px;
                 }

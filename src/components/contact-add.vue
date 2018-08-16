@@ -140,6 +140,7 @@
                 display: flex;
                 width: 100%;
                 justify-content: left;
+                margin-bottom: 40px;
                 .account-details-content {
                     display: flex;
                     flex-direction: column;
@@ -155,6 +156,9 @@
                     margin-right: 20px;
                     margin-bottom: 19px;
                     padding: 5px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
                 }
                 .pic-container {
                     position: relative;

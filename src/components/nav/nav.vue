@@ -32,6 +32,7 @@
             align-items: center;
             li {
                 margin-bottom: 25px;
+                cursor: pointer;
                 &:first-child {
                     margin-top: 20px;
                 }

@@ -9,6 +9,7 @@ import './css/main.css'
 
 Vue.use(VeeValidate);
 
+
 Vue.config.productionTip = false
 
 new Vue({

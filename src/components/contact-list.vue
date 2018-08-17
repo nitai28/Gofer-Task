@@ -110,8 +110,9 @@
             li {
                 .x {
                     position: absolute;
-                    top: 24px;
+                    top: 26px;
                     right: 18px;
+                    cursor: pointer;
                 }
 
                 .contact-details {

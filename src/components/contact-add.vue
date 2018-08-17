@@ -63,7 +63,8 @@
 
                         </div>
                         <div class="input-box">
-                            <input type="password" name="pw_confirm" ref="pw_confirm" placeholder="Repeat Password"
+                            <input type="password" name="pw_confirm"
+                                   ref="pw_confirm" placeholder="Repeat Password"
                                    v-model="passwordToConfirm"
                                    v-validate="'required'">
                             <p class="error-message">{{ errors.first('pw_confirm') }}</p>
@@ -72,10 +73,14 @@
 
                     </div>
                     <div class="pic-container">
-                        <img src="/img/add.svg" alt="plus">
-                        <span>Add photo</span>
-                        <img class="avatar-pic" src="/img/contacts/avatar.png" alt="">
-
+                        <input style="display:none" ref="fileInput" type="file" @change=upload($event.target.files)
+                               accept="image/*">
+                        <div class="add-pic">
+                            <img @click="$refs.fileInput.click()" src="/img/add.svg" alt="plus">
+                            <span>Add photo</span>
+                        </div>
+                        <img v-if="!selectedFile" class="avatar-pic" src="/img/contacts/avatar.png" alt="">
+                        <img v-else class="pic-preview" :src="selectedFile" alt="">
                     </div>
                 </div>
                 <div class="button-details">
@@ -94,13 +99,25 @@
 <script>
     import {Validator} from 'vee-validate';
     import contactService from '../services/contact.service.js'
+    import axios from 'axios';
 
     export default {
         name: "contact-add",
         data() {
             return {
                 contactToAdd: contactService.getEmptyObj(),
-                passwordToConfirm: ''
+                passwordToConfirm: '',
+                selectedFile: null,
+                cloudinary: {
+                    uploadPreset: 'rineqrjw',
+                    apiKey: '911599245781842',
+                    cloudName: 'nitai'
+                },
+                thumb: {
+                    url: ''
+                },
+                thumbs: []
+
             }
         },
 
@@ -108,10 +125,12 @@
             validateBeforeSubmit() {
                 this.$validator.validateAll().then((result) => {
                     if (result) {
+                        errors = [];
+                        this.contactToAdd.photo = this.selectedFile;
                         this.$store.dispatch({type: 'saveContact', contact: this.contactToAdd})
                             .then(() => {
                                 this.contactToAdd = contactService.getEmptyObj();
-                                this.passwordToConfirm='';
+                                this.passwordToConfirm = '';
                             })
                         return;
                     }
@@ -122,12 +141,33 @@
                 this.contactToAdd = contactService.getEmptyObj();
                 this.passwordToConfirm = '';
 
+            },
+            upload: function (file) {
+                const formData = new FormData()
+                formData.append('file', file[0]);
+                formData.append('upload_preset', this.cloudinary.uploadPreset);
+                formData.append('tags', 'gs-vue,gs-vue-uploaded');
+                for (var pair of formData.entries()) {
+                    console.log(pair[0] + ', ' + pair[1]);
+                }
+                axios.post(this.clUrl, formData).then(res => {
+                    this.selectedFile = res.data.url
+                    console.log(this.selectedFile)
+                    this.thumbs.unshift({
+                        url: res.data.secure_url
+                    })
+                })
             }
+        },
+        computed: {
+            clUrl: function () {
+                return `https://api.cloudinary.com/v1_1/${this.cloudinary.cloudName}/upload`
+            },
         },
 
         components: {
             Validator,
-            contactService
+            contactService,
         }
     }
 </script>
@@ -246,6 +286,21 @@
                         z-index: 1;
                         bottom: -1px;
                         left: 19px;
+                    }
+                    .pic-preview {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .add-pic{
+                        color: #9ba0b2;
+                        font-size: 12px;
+                        margin-top: 17px;
+                        img{
+                            margin-right: 6px;
+                        }
                     }
                 }
 

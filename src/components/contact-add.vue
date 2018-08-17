@@ -67,7 +67,7 @@
                                    ref="pw_confirm" placeholder="Repeat Password"
                                    v-model="passwordToConfirm"
                                    v-validate="'required'">
-                            <p class="error-message">{{ errors.first('pw_confirm') }}</p>
+                            <p  class="error-message">{{ errors.first('pw_confirm') }}</p>
 
                         </div>
 
@@ -76,8 +76,8 @@
                         <input style="display:none" ref="fileInput" type="file" @change=upload($event.target.files)
                                accept="image/*">
                         <div class="add-pic">
-                            <img @click="$refs.fileInput.click()" src="/img/add.svg" alt="plus">
-                            <span>Add photo</span>
+                            <img v-if="!selectedFile" @click="$refs.fileInput.click()" src="/img/add.svg" alt="plus">
+                            <span v-if="!selectedFile">Add photo</span>
                         </div>
                         <img v-if="!selectedFile" class="avatar-pic" src="/img/contacts/avatar.png" alt="">
                         <img v-else class="pic-preview" :src="selectedFile" alt="">
@@ -124,17 +124,18 @@
         methods: {
             validateBeforeSubmit() {
                 this.$validator.validateAll().then((result) => {
+                    var that=this
                     if (result) {
-                        errors = [];
                         this.contactToAdd.photo = this.selectedFile;
                         this.$store.dispatch({type: 'saveContact', contact: this.contactToAdd})
                             .then(() => {
                                 this.contactToAdd = contactService.getEmptyObj();
                                 this.passwordToConfirm = '';
+                                this.errors.clear();
                             })
                         return;
                     }
-
+                    else setTimeout(function(){ that.errors.clear(); }, 10000);
                 })
             },
             clearInput() {
@@ -293,12 +294,13 @@
                         position: absolute;
                         top: 0;
                         left: 0;
+                        object-fit: cover;
                     }
-                    .add-pic{
+                    .add-pic {
                         color: #9ba0b2;
                         font-size: 12px;
                         margin-top: 17px;
-                        img{
+                        img {
                             margin-right: 6px;
                         }
                     }

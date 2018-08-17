@@ -25,6 +25,7 @@
     "sass-loader": "^7.1.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "vue-avatar-component": "^1.2.4",
     "vue-template-compiler": "^2.5.13"
   },
   "browserslist": [

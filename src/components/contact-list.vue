@@ -13,8 +13,9 @@
                     @mouseleave="closeDetails">
                     <div class="contact-box">
                         <div class="half-box">
-                            <img class="contact-img" :src="contact.photo" alt="">
-                            <h2 class="contact-full-name">{{contact.firstName}} {{contact.lastName}}</h2>
+                            <img v-if="contact.photo" class="contact-img" :src="contact.photo" alt="">
+                            <avatar v-else class="avatar-img" :fullname="contact.firstName +' '+ contact.lastName" size="30"></avatar>
+                            <h2 class="contact-full-name">{{contact.firstName|NameToUpperCase}} {{contact.lastName|NameToUpperCase}}</h2>
                             <img class="x" v-if="currentContact&& contact.id===currentContact.id"
                                  @click.stop="removeContact(contact.id)"
                                  src="/img/contact-list/close-remove-md.svg" alt="">
@@ -36,6 +37,7 @@
 
 <script>
     import contactDetails from './contact-details'
+    import Avatar from 'vue-avatar-component'
 
     export default {
         name: 'contact-list',
@@ -70,10 +72,16 @@
                 return this.$store.getters.contactsForDisplay;
             }
         },
-        filters: {},
-
+        filters: {
+            NameToUpperCase(name) {
+                return name.replace(/\w\S*/g, function (txt) {
+                    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                });
+            },
+        },
         components: {
-            contactDetails
+            contactDetails,
+            Avatar
         }
     }
 </script>
@@ -86,16 +94,14 @@
         background-color: #ffffff;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.09);
         .contact-list-content {
-            margin-left: 20px;
             text-align: left;
             .seperator {
                 border: solid 1px #e6e9f2;
                 width: 280px;
                 height: 2px;
-                margin-left: - 20px;
             }
             .list-headline {
-                margin: 20px 0 22px;
+                margin: 20px 0 22px 20px;
                 width: 94px;
                 height: 22px;
                 font-size: 16px;
@@ -108,11 +114,18 @@
 
             }
             li {
+
+                font-size: 13px;
+                color: #131b3c;
                 .x {
                     position: absolute;
-                    top: 26px;
+                    top: 28px;
                     right: 18px;
                     cursor: pointer;
+                }
+                &:hover {
+                    background-color: #f5f7fa;
+
                 }
 
                 .contact-details {
@@ -152,12 +165,23 @@
                 height: 66px;
                 .half-box {
                     display: flex;
+                    align-items: center;
+                    margin-left: 20px;
                 }
                 .contact-img {
                     width: 30px;
                     height: 30px;
                     object-fit: cover;
                     border-radius: 50%;
+
+                }
+                .avatar-img{
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                 }
                 .contact-full-name {

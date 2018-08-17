@@ -4,12 +4,14 @@
     <list default="true" id="e4d0ebf7-d8dc-478a-a195-0ae276ee3b37" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/cache-loader/46a00ffb13abd3080b1e108ded89da1e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/cache-loader/46a00ffb13abd3080b1e108ded89da1e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/cache-loader/4e87d8ebcaae21f1c4ed93656b49539e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/cache-loader/4e87d8ebcaae21f1c4ed93656b49539e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/vue-cloudinary/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/vue-cloudinary/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/book-details.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/book-list.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/contact-add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact-add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact-details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact-details.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact-exhibition.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact-exhibition.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/contact-list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact-list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav/nav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/nav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,24 +25,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contact-add.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/contact-add.vue">
+      <file leaf-file-name="contact-list.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="298" column="40" lean-forward="true" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
+            <state relative-caret-position="476">
+              <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="84" selection-end-column="9" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#script#0;n#!!top" />
-                <element signature="e#4331#4370#0" expanded="true" />
-                <element signature="e#4500#6479#0" />
+                <element signature="e#1453#1499#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book-list.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/book-list.vue">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="contact-details.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/contact-details.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="21" selection-start-line="21" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact-exhibition.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/contact-exhibition.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Avatar.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/vue-avatar-component/Avatar.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact-add.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/contact-add.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3494">
+              <caret line="133" column="52" selection-start-line="133" selection-start-column="52" selection-end-line="133" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#4331#4370#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="contact.service.js" pinned="false" current-in-tab="false">
@@ -79,6 +113,7 @@
       <find>Book</find>
       <find>books</find>
       <find>book</find>
+      <find>contact-img</find>
     </findStrings>
     <replaceStrings>
       <replace>Contact</replace>
@@ -102,13 +137,14 @@
         <option value="$PROJECT_DIR$/src/store.js" />
         <option value="$PROJECT_DIR$/src/services/contact.service.js" />
         <option value="$PROJECT_DIR$/public/contactsDB.json" />
-        <option value="$PROJECT_DIR$/src/components/contact-exhibition.vue" />
-        <option value="$PROJECT_DIR$/src/components/contact-details.vue" />
         <option value="$PROJECT_DIR$/src/components/UploadImg.vue" />
-        <option value="$PROJECT_DIR$/src/components/contact-list.vue" />
         <option value="$PROJECT_DIR$/src/components/nav/nav.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/contact-add.vue" />
+        <option value="$PROJECT_DIR$/src/components/contact-list.vue" />
+        <option value="$PROJECT_DIR$/node_modules/vue-avatar-component/Avatar.vue" />
+        <option value="$PROJECT_DIR$/src/components/contact-details.vue" />
+        <option value="$PROJECT_DIR$/src/components/contact-exhibition.vue" />
       </list>
     </option>
   </component>
@@ -227,12 +263,12 @@
       <updated>1534227834479</updated>
       <workItem from="1534227837054" duration="24033000" />
       <workItem from="1534305205535" duration="40612000" />
-      <workItem from="1534481595130" duration="18500000" />
+      <workItem from="1534481595130" duration="23534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83145000" />
+    <option name="totallyTimeSpent" value="88179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -242,6 +278,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -255,7 +292,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,9 +301,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/img/contacts/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/img/contacts/2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -389,20 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/contact-details.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/contact-exhibition.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="151" column="21" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UploadImg.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -454,23 +473,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/contact-add.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+        <state relative-caret-position="-3494">
+          <caret line="133" column="52" selection-start-line="133" selection-start-column="52" selection-end-line="133" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#4331#4370#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/contact-add.vue">
+    <entry file="file://$PROJECT_DIR$/node_modules/vue-avatar-component/Avatar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="298" column="40" lean-forward="true" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
+        <state relative-caret-position="140">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="84" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#script#0;n#!!top" />
-            <element signature="e#4331#4370#0" expanded="true" />
-            <element signature="e#4500#6479#0" />
+            <element signature="e#1453#1499#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/contact-details.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" selection-start-line="21" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/contact-exhibition.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
         </state>
       </provider>
     </entry>

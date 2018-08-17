@@ -1,7 +1,8 @@
 <template>
     <section class="contact-details">
         <div class="profile">
-            <img class="profile-pic" :src="contact.photo" alt="">
+            <img v-if="contact.photo" class="profile-pic" :src="contact.photo" alt="">
+            <avatar v-else class="avatar-img" :fullname="contact.firstName +' '+ contact.lastName" size="50"></avatar>
             <h3>{{contact.accountName}}</h3>
         </div>
         <div class="details">
@@ -18,11 +19,15 @@
 </template>
 
 <script>
+    import Avatar from 'vue-avatar-component'
 
     export default {
         name: "contact-details",
         props: {contact: {type: Object, required: true}},
         filters: {},
+        components: {
+            Avatar
+        }
 
     }
 </script>

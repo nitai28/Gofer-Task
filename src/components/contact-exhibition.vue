@@ -4,7 +4,10 @@
             <h2>Recent Users</h2>
             <ul>
                 <li v-for="(contact,idx) in contacts" :key="contact.id" class="circle-photos-content">
-                    <img v-if="idx<11" class="circle-photo" :src="contact.photo" alt="contact">
+                    <img v-if="idx<11&&contact.photo" class="circle-photo" :src="contact.photo" alt="contact">
+                    <avatar v-if="!contact.photo"
+                            :fullname="contact.firstName +' '+ contact.lastName" size="50"></avatar>
+
                     <div v-if="idx===11" class="circle-photo">
                         <span>+{{contacts.length-11}}</span>
                     </div>
@@ -20,13 +23,22 @@
                 <li v-for="(contact,idx) in contacts" :key="contact.id" class="recent-photos-list">
 
                     <div v-if="idx===0" class="pic large">
-                        <img :src="contact.photo" alt="" class="img ">
+                        <img v-if="contact.photo" :src="contact.photo" alt="" class="img ">
+                        <avatar v-else class="pic large" :fullname="contact.firstName +' '+ contact.lastName"
+                                size="50"></avatar>
+
                     </div>
                     <div v-if="idx===1" class="pic medium">
-                        <img :src="contact.photo" alt="" class="img ">
+                        <img v-if="contact.photo" :src="contact.photo" alt="" class="img ">
+                        <avatar v-else class="pic medium" :fullname="contact.firstName +' '+ contact.lastName"
+                                size="50"></avatar>
+
                     </div>
                     <div v-if="idx>=2 && idx<5" class="pic small">
-                        <img :src="contact.photo" alt="" class="img">
+                        <img v-if="contact.photo" :src="contact.photo" alt="" class="img">
+                        <avatar v-else class="pic small" :fullname="contact.firstName +' '+ contact.lastName"
+                                size="50"></avatar>
+
                         <div v-if="idx===4" class="counter-pic">+{{contacts.length-5}}</div>
                     </div>
 
@@ -38,6 +50,8 @@
 </template>
 
 <script>
+    import Avatar from 'vue-avatar-component'
+
     export default {
         name: "contact-exhibition",
         computed: {
@@ -45,6 +59,9 @@
                 return this.$store.getters.contactsForDisplay;
             }
         },
+        components: {
+            Avatar
+        }
     }
 </script>
 
@@ -138,7 +155,7 @@
                         background-color: #ffffff;
                         box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
                     }
-                    .counter-pic{
+                    .counter-pic {
                         width: 100%;
                         height: 100%;
                         display: flex;
@@ -150,7 +167,6 @@
                         background-color: rgba(0, 0, 0, 0.5);
                         font-weight: bold;
                     }
-
 
                 }
 

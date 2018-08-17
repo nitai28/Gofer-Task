@@ -16,7 +16,7 @@
                             <img class="contact-img" :src="contact.photo" alt="">
                             <h2 class="contact-full-name">{{contact.firstName}} {{contact.lastName}}</h2>
                             <img class="x" v-if="currentContact&& contact.id===currentContact.id"
-                                 @click.stop="closeDetails"
+                                 @click.stop="removeContact(contact.id)"
                                  src="/img/contact-list/close-remove-md.svg" alt="">
 
                         </div>
@@ -41,7 +41,6 @@
         name: 'contact-list',
         data() {
             return {
-                selectedContact: false,
                 currentContact: null,
                 posdefine: 'static'
             }
@@ -50,13 +49,15 @@
             updateCurrentContact(id) {
                 this.$store.commit({type: 'setSelectedContact', id: id});
                 this.currentContact = this.$store.state.currentContact;
-                this.selectedContact = !this.selectedContact;
                 this.posdefine = 'relative';
             },
             closeDetails() {
                 this.currentContact = ''
                 this.posdefine = 'static';
             },
+            removeContact(id) {
+                this.$store.dispatch({type: 'deletedContact', id: id});
+            }
 
         },
         created() {

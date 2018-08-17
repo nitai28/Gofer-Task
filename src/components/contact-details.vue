@@ -4,7 +4,6 @@
             <img class="profile-pic" :src="contact.photo" alt="">
             <h3>{{contact.accountName}}</h3>
         </div>
-        <!--<div class="line"></div>-->
         <div class="details">
             <h2></h2>
             <span class="full-name">{{contact.firstName}} {{contact.lastName}}</span>

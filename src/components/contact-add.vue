@@ -7,20 +7,69 @@
             <form @submit.prevent="validateBeforeSubmit">
 
                 <div class="user-details">
-                    <input type="text" name="first name" placeholder="First Name" v-model="contactToAdd.firstName" v-validate="'required'">
-                    <!--<p class="error-message">{{ errors.first('first name') }}</p>-->
+                    <div class="two-input">
+                        <div class="input-box">
+                            <input type="text" name="First Name" placeholder="First Name"
+                                   v-model="contactToAdd.firstName"
+                                   v-validate="'required'">
+                            <p class="error-message">{{ errors.first('First Name') }}</p>
 
-                    <input type="text" placeholder="Last Name" v-model="contactToAdd.lastName" v-validate.immediate="'required'">
-                    <input type="date" placeholder="Birth Date" v-model="contactToAdd.birthDay">
-                    <input type="text" placeholder="Phone Number" v-model="contactToAdd.phoneNumber">
-                    <input type="email" placeholder="Email Address" v-model="contactToAdd.emailAddress" v-validate.immediate="'required'">
+                        </div>
+
+                        <div class="input-box">
+                            <input type="text" name="Last Name" placeholder="Last Name" v-model="contactToAdd.lastName"
+                                   v-validate="'required'">
+                            <p class="error-message">{{ errors.first('Last Name') }}</p>
+                        </div>
+
+                    </div>
+                    <div class="two-input">
+                        <div class="input-box">
+
+                            <input type="date" name="Birth Date" placeholder="Birth Date"
+                                   v-model="contactToAdd.birthDay"
+                                   v-validate="'required'">
+                            <p class="error-message">{{ errors.first('Birth Date') }}</p>
+
+                        </div>
+
+                        <input type="text" placeholder="Phone Number" v-model="contactToAdd.phoneNumber">
+                    </div>
+
+                    <div class="input-box email">
+                        <input type="text" name="email" placeholder="Email Address" v-model="contactToAdd.emailAddress"
+                               v-validate="'required|email'">
+                        <p class="error-message">{{ errors.first('email') }}</p>
+
+                    </div>
+
                 </div>
                 <h2>Account details</h2>
                 <div class="account-details">
                     <div class="account-details-content">
-                        <input type="text" placeholder="User Name" v-model="contactToAdd.accountName" v-validate.immediate="'required'">
-                        <input type="password" placeholder="Password" v-model="contactToAdd.password" v-validate.immediate="'required'">
-                        <input type="password" placeholder="Repeat Password" v-model="passwordToConfirm" v-validate.immediate="'required'" >
+
+                        <div class="input-box">
+                            <input type="text" name="User Name" placeholder="User Name"
+                                   v-model="contactToAdd.accountName"
+                                   v-validate="'required'">
+                            <p class="error-message">{{ errors.first('User Name') }}</p>
+
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="Password" placeholder="Password"
+                                   v-model="contactToAdd.password"
+                                   v-validate="'required|confirmed:pw_confirm'">
+                            <p class="error-message">{{ errors.first('Password') }}</p>
+
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="pw_confirm" ref="pw_confirm" placeholder="Repeat Password"
+                                   v-model="passwordToConfirm"
+                                   v-validate="'required'">
+                            <p class="error-message">{{ errors.first('pw_confirm') }}</p>
+
+                        </div>
+
                     </div>
                     <div class="pic-container">
                         <img src="/img/add.svg" alt="plus">
@@ -30,8 +79,8 @@
                     </div>
                 </div>
                 <div class="button-details">
-                    <input @click="clearInput" type="button"  class="red button" value="Clear" >
-                    <input  type="submit" class="blue button" value="Add">
+                    <input @click="clearInput" type="button" class="red button" value="Clear">
+                    <input type="submit" class="blue button" value="Add">
 
                 </div>
             </form>
@@ -51,7 +100,7 @@
         data() {
             return {
                 contactToAdd: contactService.getEmptyObj(),
-                passwordToConfirm:''
+                passwordToConfirm: ''
             }
         },
 
@@ -61,15 +110,17 @@
                     if (result) {
                         this.$store.dispatch({type: 'saveContact', contact: this.contactToAdd})
                             .then(() => {
-                                this.contactToAdd=contactService.getEmptyObj();
+                                this.contactToAdd = contactService.getEmptyObj();
+                                this.passwordToConfirm='';
                             })
                         return;
                     }
 
                 })
             },
-            clearInput(){
-                this.contactToAdd=contactService.getEmptyObj();
+            clearInput() {
+                this.contactToAdd = contactService.getEmptyObj();
+                this.passwordToConfirm = '';
 
             }
         },
@@ -91,6 +142,16 @@
         align-items: center;
         margin: 0 auto;
         text-align: center;
+        .input-box {
+            position: relative;
+            p {
+                position: absolute;
+                top: 35px;
+                left: 5px;
+                font-size: 9px;
+                color: red;
+            }
+        }
         .contact-add-container {
             width: 520px;
             margin-top: 98px;
@@ -134,6 +195,17 @@
                     }
 
                 }
+                .email {
+                    width: 100%;
+                    input {
+                        width: 100%;
+                        margin-right: 0;
+                    }
+                }
+                .two-input {
+                    width: 100%;
+                    display: flex;
+                }
 
             }
             .account-details {
@@ -156,7 +228,7 @@
                     margin-right: 20px;
                     margin-bottom: 19px;
                     padding: 5px;
-                    &:last-child{
+                    &:last-child {
                         margin-bottom: 0;
                     }
                 }
@@ -181,6 +253,7 @@
             .button-details {
                 display: flex;
                 justify-content: flex-end;
+                margin-bottom: 98px;
                 .button {
                     color: #ffffff;
                     display: flex;

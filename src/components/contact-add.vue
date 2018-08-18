@@ -76,7 +76,7 @@
                         <input style="display:none" ref="fileInput" type="file" @change=upload($event.target.files)
                                accept="image/*">
                         <div class="add-pic">
-                            <img v-if="!selectedFile" @click="$refs.fileInput.click()" src="/img/add.svg" alt="plus">
+                            <img v-if="!selectedFile" src="/img/add.svg" alt="plus">
                             <span v-if="!selectedFile">Add photo</span>
                         </div>
                         <img v-if="!selectedFile" class="avatar-pic" src="/img/contacts/avatar.png" alt="">
@@ -131,6 +131,7 @@
                         this.contactToAdd.photo = this.selectedFile;
                         this.$store.dispatch({type: 'saveContact', contact: this.contactToAdd})
                             .then(() => {
+                                this.selectedFile=null;
                                 this.contactToAdd = contactService.getEmptyObj();
                                 EventBusService.$emit(SHOW_MSG, 'add')
                                 this.passwordToConfirm = '';

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4d0ebf7-d8dc-478a-a195-0ae276ee3b37" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/cache-loader/46a00ffb13abd3080b1e108ded89da1e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/cache-loader/46a00ffb13abd3080b1e108ded89da1e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/contactsDB.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/contactsDB.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact-add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact-add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact-list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact-list.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contact-list.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contact-list.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+            <state relative-caret-position="420">
+              <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
               <folding>
                 <element signature="e#1610#1656#0" expanded="true" />
               </folding>
@@ -31,10 +28,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact-add.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact-add.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/contact-add.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
+            <state relative-caret-position="500">
               <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
                 <element signature="n#div#1;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" />
@@ -122,10 +119,10 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/user-msg1.vue" />
         <option value="$PROJECT_DIR$/src/services/EventBusService.js" />
-        <option value="$PROJECT_DIR$/src/components/contact-list.vue" />
         <option value="$PROJECT_DIR$/src/components/user-msg.vue" />
         <option value="$PROJECT_DIR$/public/contactsDB.json" />
         <option value="$PROJECT_DIR$/src/components/contact-add.vue" />
+        <option value="$PROJECT_DIR$/src/components/contact-list.vue" />
       </list>
     </option>
   </component>
@@ -145,11 +142,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1676" />
-    <option name="y" value="92" />
-    <option name="width" value="990" />
-    <option name="height" value="540" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -246,15 +243,15 @@
       <updated>1534227834479</updated>
       <workItem from="1534227837054" duration="24033000" />
       <workItem from="1534305205535" duration="40612000" />
-      <workItem from="1534481595130" duration="38136000" />
+      <workItem from="1534481595130" duration="38725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102781000" />
+    <option name="totallyTimeSpent" value="103370000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12486828" />
@@ -482,16 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
-          <folding>
-            <element signature="e#1610#1656#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/contactsDB.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2580">
@@ -511,7 +498,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/contact-add.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="500">
           <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
             <element signature="n#div#1;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" />
@@ -523,6 +510,16 @@
             <element signature="n#div#2;n#form#0;n#div#0;n#section#0;n#template#0;n#!!top" />
             <element signature="e#4488#4527#0" expanded="true" />
             <element signature="n#style#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/contact-list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+          <folding>
+            <element signature="e#1610#1656#0" expanded="true" />
           </folding>
         </state>
       </provider>

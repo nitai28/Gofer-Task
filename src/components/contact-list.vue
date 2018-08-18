@@ -132,6 +132,9 @@
                     background-color: #f5f7fa;
 
                 }
+                &:last-child{
+                    margin-bottom: 170px;
+                }
 
                 .contact-details {
                     position: absolute;

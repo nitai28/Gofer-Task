@@ -126,7 +126,7 @@
         methods: {
             validateBeforeSubmit() {
                 this.$validator.validateAll().then((result) => {
-                    var that = this
+                    var that = this;
                     if (result) {
                         this.contactToAdd.photo = this.selectedFile;
                         this.$store.dispatch({type: 'saveContact', contact: this.contactToAdd})

@@ -42,25 +42,90 @@
     "photo": "./img/contacts/4.jpg",
     "accountName": "noa_ch",
     "password": "555"
-  }, {
+  },
+  {
     "id": 5,
-    "firstName": "Noa",
-    "lastName": "Chen",
-    "birthDay": "2/9/1992",
-    "phoneNumber": "0504443221",
-    "emailAddress": "noa_c@gmail.com",
-    "photo": "./img/contacts/4.jpg",
-    "accountName": "noa_ch",
-    "password": "555"
-  }, {
+    "firstName": "Ora",
+    "lastName": "White",
+    "birthDay": "2/9/1999",
+    "phoneNumber": "0504243121",
+    "emailAddress": "Ora_c@gmail.com",
+    "photo": "./img/contacts/10.jpg",
+    "accountName": "White_ch",
+    "password": "111"
+  },
+  {
     "id": 6,
-    "firstName": "Noa",
-    "lastName": "Chen",
+    "firstName": "Norma",
+    "lastName": "Charles",
+    "birthDay": "2/1/1993",
+    "phoneNumber": "+1 (805) 492-3922",
+    "emailAddress": "normacharles@overfork.com",
+    "photo": "./img/contacts/8.jpg",
+    "accountName": "Norma",
+    "password": "44235"
+  },
+  {
+    "id": 7,
+    "firstName": "Ruth",
+    "lastName": "Michael",
     "birthDay": "2/9/1992",
-    "phoneNumber": "0504443221",
-    "emailAddress": "noa_c@gmail.com",
-    "photo": "./img/contacts/4.jpg",
-    "accountName": "noa_ch",
-    "password": "555"
+    "phoneNumber": "+1 (805) 492-3922",
+    "emailAddress": "ruthmichael@xurban.com",
+    "photo": "./img/contacts/7.jpg",
+    "accountName": "blue",
+    "password": "213"
+  },
+  {
+    "id": 8,
+    "firstName": "Humphrey",
+    "lastName": "Cline",
+    "birthDay": "2/9/1992",
+    "phoneNumber": "+1 (805) 492-3922",
+    "emailAddress": "humphreycline@uberlux.com",
+    "photo": "./img/contacts/17.jpg",
+    "accountName": "blue123",
+    "password": "213"
+  },
+  {
+    "id": 9,
+    "firstName": "Suarez",
+    "lastName": "Reeves",
+    "birthDay": "12/4/1982",
+    "phoneNumber": "+1 (814) 539-3475",
+    "emailAddress": "suarezreeves@nikuda.com",
+    "photo": "./img/contacts/16.jpg",
+    "accountName": "nulla",
+    "password": "213"
+  },{
+    "id": 10,
+    "firstName": "Suzi",
+    "lastName": "Reeves",
+    "birthDay": "19/4/1981",
+    "phoneNumber": "+1 (814) 539-3475",
+    "emailAddress": "suzi@nikuda.com",
+    "photo": "./img/contacts/13.jpg",
+    "accountName": "Suzi",
+    "password": "12345"
+  },{
+    "id": 11,
+    "firstName": "Maya",
+    "lastName": "Lfes",
+    "birthDay": "19/2/1989",
+    "phoneNumber": "+1 (814) 539-555",
+    "emailAddress": "maya_c@nikuda.com",
+    "photo": "./img/contacts/11.jpg",
+    "accountName": "maya_c",
+    "password": "1234522223"
+  },{
+    "id": 12,
+    "firstName": "Kay",
+    "lastName": "Li",
+    "birthDay": "22/6/1977",
+    "phoneNumber": "+1 (816) 444-555",
+    "emailAddress": "kay@nikuda.com",
+    "photo": "./img/contacts/9.jpg",
+    "accountName": "kay_c",
+    "password": "522223"
   }
 ]

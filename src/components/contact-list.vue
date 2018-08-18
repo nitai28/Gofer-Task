@@ -14,7 +14,7 @@
                     <div class="contact-box">
                         <div class="half-box">
                             <img v-if="contact.photo" class="contact-img" :src="contact.photo" alt="">
-                            <avatar v-else class="avatar-img" :fullname="contact.firstName +' '+ contact.lastName" size="30"></avatar>
+                            <avatar v-else class="avatar-img" :fullname="contact.firstName +' '+ contact.lastName" :size="30"></avatar>
                             <h2 class="contact-full-name">{{contact.firstName|NameToUpperCase}} {{contact.lastName|NameToUpperCase}}</h2>
                             <img class="x" v-if="currentContact&& contact.id===currentContact.id"
                                  @click.stop="removeContact(contact.id)"

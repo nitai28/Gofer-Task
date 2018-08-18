@@ -2,7 +2,7 @@
     <section class="contact-details">
         <div class="profile">
             <img v-if="contact.photo" class="profile-pic" :src="contact.photo" alt="">
-            <avatar v-else class="avatar-img" :fullname="contact.firstName +' '+ contact.lastName" size="50"></avatar>
+            <avatar v-else class="avatar-img" :fullname="contact.firstName +' '+ contact.lastName" :size="50"></avatar>
             <h3>{{contact.accountName}}</h3>
         </div>
         <div class="details">

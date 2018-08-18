@@ -5,7 +5,6 @@
 
             <h2>User details</h2>
             <form @submit.prevent="validateBeforeSubmit">
-
                 <div class="user-details">
                     <div class="two-input">
                         <div class="input-box">
@@ -67,7 +66,7 @@
                                    ref="pw_confirm" placeholder="Repeat Password"
                                    v-model="passwordToConfirm"
                                    v-validate="'required'">
-                            <p  class="error-message">{{ errors.first('pw_confirm') }}</p>
+                            <p class="error-message">{{ errors.first('pw_confirm') }}</p>
 
                         </div>
 
@@ -100,6 +99,7 @@
     import {Validator} from 'vee-validate';
     import contactService from '../services/contact.service.js'
     import axios from 'axios';
+    // import  userMsg from './user-msg1'
 
     export default {
         name: "contact-add",
@@ -116,7 +116,8 @@
                 thumb: {
                     url: ''
                 },
-                thumbs: []
+                thumbs: [],
+                mode:false
 
             }
         },
@@ -124,18 +125,22 @@
         methods: {
             validateBeforeSubmit() {
                 this.$validator.validateAll().then((result) => {
-                    var that=this
+                    var that = this
                     if (result) {
                         this.contactToAdd.photo = this.selectedFile;
                         this.$store.dispatch({type: 'saveContact', contact: this.contactToAdd})
                             .then(() => {
                                 this.contactToAdd = contactService.getEmptyObj();
+                                this.$store.commit({type:'setUserMsgMode',mode:'add'})
+                                this.mode=true;
                                 this.passwordToConfirm = '';
                                 this.errors.clear();
                             })
                         return;
                     }
-                    else setTimeout(function(){ that.errors.clear(); }, 10000);
+                    else setTimeout(() => {
+                        that.errors.clear();
+                    }, 6000);
                 })
             },
             clearInput() {
@@ -169,6 +174,7 @@
         components: {
             Validator,
             contactService,
+            // userMsg
         }
     }
 </script>
@@ -176,6 +182,7 @@
 
 <style lang="scss" scoped>
     .contact-add {
+        position: relative;
         background-color: #f5f7fa;
         width: 100%;
         display: flex;

@@ -13,6 +13,7 @@
     import contactList from '../components/contact-list';
     import contactAdd from '../components/contact-add';
     import contactExhibition from '../components/contact-exhibition';
+    // import usrMsg from '../components/user-msg';
 
     export default {
         name: "contact-app",
@@ -21,7 +22,8 @@
             navBar,
             contactList,
             contactAdd,
-            contactExhibition
+            contactExhibition,
+            // usrMsg
 
         }
 

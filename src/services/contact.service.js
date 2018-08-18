@@ -5,7 +5,9 @@ const KEY = 'contactsAppKey';
 
 
 function query() {
-    return axios.get('contactsDb.json')
+    if (localStorage[KEY]) return storageService.load(KEY)
+
+    else return axios.get('contactsDb.json')
         .then(res => {
             localStorage[KEY] = JSON.stringify(res.data)
             return res.data;

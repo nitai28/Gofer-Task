@@ -9,6 +9,7 @@ export default new Vuex.Store({
     state: {
         contacts: [],
         currentContact: {},
+
     },
     mutations: {
         setContacts(state, {contacts}) {
@@ -31,6 +32,7 @@ export default new Vuex.Store({
             );
             state.contacts.splice(contactIdx, 1, contact);
         },
+
 
 
     },
@@ -62,6 +64,7 @@ export default new Vuex.Store({
         contactsForDisplay(state) {
             return state.contacts;
         },
+
 
     }
 });

@@ -6,7 +6,7 @@
                 <li v-for="(contact,idx) in contacts" :key="contact.id" class="circle-photos-content">
                     <img v-if="idx<11&&contact.photo" class="circle-photo" :src="contact.photo" alt="contact">
                     <avatar v-if="!contact.photo"
-                            :fullname="contact.firstName +' '+ contact.lastName" size="50"></avatar>
+                            :fullname="contact.firstName +' '+ contact.lastName" :size="50"></avatar>
 
                     <div v-if="idx===11" class="circle-photo">
                         <span>+{{contacts.length-11}}</span>
@@ -25,21 +25,21 @@
                     <div v-if="idx===0" class="pic large">
                         <img v-if="contact.photo" :src="contact.photo" alt="" class="img ">
                         <avatar v-else class="pic large" :fullname="contact.firstName +' '+ contact.lastName"
-                                size="50"></avatar>
+                                :size="50"></avatar>
 
                     </div>
                     <div v-if="idx===1" class="pic medium">
                         <img v-if="contact.photo" :src="contact.photo" alt="" class="img ">
                         <avatar v-else class="pic medium" :fullname="contact.firstName +' '+ contact.lastName"
-                                size="50"></avatar>
+                                :size="50"></avatar>
 
                     </div>
                     <div v-if="idx>=2 && idx<5" class="pic small">
                         <img v-if="contact.photo" :src="contact.photo" alt="" class="img">
                         <avatar v-else class="pic small" :fullname="contact.firstName +' '+ contact.lastName"
-                                size="50"></avatar>
+                                :size="50"></avatar>
 
-                        <div v-if="idx===4" class="counter-pic">+{{contacts.length-5}}</div>
+                        <div v-if="idx===4&& contacts.length-5>0" class="counter-pic">+{{contacts.length-5}}</div>
                     </div>
 
                 </li>

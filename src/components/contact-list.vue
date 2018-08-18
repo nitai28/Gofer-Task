@@ -111,10 +111,6 @@
                 height: 22px;
                 font-size: 16px;
                 font-weight: bold;
-                font-style: normal;
-                font-stretch: normal;
-                line-height: normal;
-                letter-spacing: normal;
                 color: #131b3c;
 
             }

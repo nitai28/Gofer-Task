@@ -72,7 +72,7 @@
                         </div>
 
                     </div>
-                    <div class="pic-container">
+                    <div @click="$refs.fileInput.click()" class="pic-container">
                         <input style="display:none" ref="fileInput" type="file" @change=upload($event.target.files)
                                accept="image/*">
                         <div class="add-pic">
@@ -282,6 +282,7 @@
                     }
                 }
                 .pic-container {
+                    cursor: pointer;
                     position: relative;
                     width: 142px;
                     height: 142px;

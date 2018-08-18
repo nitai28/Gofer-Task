@@ -38,6 +38,8 @@
 <script>
     import contactDetails from './contact-details'
     import Avatar from 'vue-avatar-component'
+    import EventBusService, {SHOW_MSG} from '../services/EventBusService.js'
+
 
     export default {
         name: 'contact-list',
@@ -59,6 +61,8 @@
             },
             removeContact(id) {
                 this.$store.dispatch({type: 'deletedContact', id: id});
+                EventBusService.$emit(SHOW_MSG, 'delete')
+
             }
 
         },
@@ -81,7 +85,8 @@
         },
         components: {
             contactDetails,
-            Avatar
+            Avatar,
+            EventBusService
         }
     }
 </script>

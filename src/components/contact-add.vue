@@ -1,5 +1,6 @@
 <template>
     <section class="contact-add">
+        <userMsg></userMsg>
         <div class="contact-add-container">
             <img class="app-logo" src="/img/gofer-logo.png" alt="logo">
 
@@ -98,8 +99,10 @@
 <script>
     import {Validator} from 'vee-validate';
     import contactService from '../services/contact.service.js'
+    import EventBusService, {SHOW_MSG} from '../services/EventBusService.js'
+
     import axios from 'axios';
-    // import  userMsg from './user-msg1'
+    import  userMsg from './user-msg'
 
     export default {
         name: "contact-add",
@@ -117,8 +120,6 @@
                     url: ''
                 },
                 thumbs: [],
-                mode:false
-
             }
         },
 
@@ -131,8 +132,7 @@
                         this.$store.dispatch({type: 'saveContact', contact: this.contactToAdd})
                             .then(() => {
                                 this.contactToAdd = contactService.getEmptyObj();
-                                this.$store.commit({type:'setUserMsgMode',mode:'add'})
-                                this.mode=true;
+                                EventBusService.$emit(SHOW_MSG, 'add')
                                 this.passwordToConfirm = '';
                                 this.errors.clear();
                             })
@@ -174,7 +174,8 @@
         components: {
             Validator,
             contactService,
-            // userMsg
+            EventBusService,
+            userMsg,
         }
     }
 </script>
